@@ -1,0 +1,864 @@
+﻿.profile-model-width {
+    width: 800px !important;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+    margin: 10px 0px 0px 0px !important;
+    white-space: nowrap;
+    text-align: right;
+    display: inline-block;
+    float: right;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    display: inline-block;
+    margin-left: 21px;
+}
+
+.dataTables_length {
+    display: inline-block;
+}
+
+.modal-custome-header {
+    padding: 7px;
+}
+
+.modal-alert .modal-dialog {
+    margin-top: 200px;
+}
+
+.modal-alert .modal-header {
+    padding: 7px;
+}
+
+#addInstitute .modal-dialog {
+    width: 800px;
+}
+
+#addInstitute .modal-body {
+    padding: 10px 15px;
+}
+
+/*ajax loader start - 1742018*/
+.modal-prg {
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.7);
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+    display: none;
+    background: url('/Images/loading-bar.gif') 50% 50% no-repeat rgba(0,0,0,.7);
+}
+
+.center-prg {
+    z-index: 1000;
+    margin: 50px auto;
+    padding: 10px;
+    width: 130px;
+    border-radius: 10px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+}
+
+.centerimg-prg {
+    height: 128px;
+    width: 128px;
+}
+/*end*/
+
+/*ajax loader start - 1942018*/
+
+.loader_text {
+    color: #333;
+    font: 18px/52px arial;
+}
+
+.loader_bg {
+    background: none repeat scroll 0 0 #f6f6f6;
+    border: 2px solid #ccccce;
+    border-radius: 10px;
+    color: #444;
+    font: bold 18px arial;
+    opacity: 1;
+    position: static;
+    text-align: center;
+    min-width: 222px;
+    padding: 0 15px;
+    width: auto !important;
+}
+
+    .loader_bg img {
+        margin: 12px 15px 12px 0px;
+        vertical-align: middle;
+    }
+
+#search_gray_layout_loader {
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.7);
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+    display: none;
+}
+/*ajax loader end - 1942018*/
+
+.table > thead > tr > th {
+    vertical-align: middle !important;
+    padding: 0px 30px 0px 10px !important;
+    white-space: nowrap;
+}
+
+.table.dataTable {
+    width: 100% !important;
+}
+
+.table-priview .table tr th {
+    width: 25%;
+}
+
+.table-priview .table tr td {
+    width: 25%;
+}
+
+.modal-header {
+    padding: 5px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.popupmargin .row {
+    margin-bottom: 10px;
+}
+
+    .popupmargin .row select {
+        margin-bottom: 10px;
+    }
+
+/*
+.popupmargin .btn-default {
+    background-color: #60a556;
+    border: 0px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 14px;
+}
+
+.popupmargin .btn {
+    background-color: #878e86;
+    border: 0px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 14px;
+}
+*/
+
+.errorclose {
+    color: #ec0000;
+    border: 1px solid;
+    margin-bottom: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.imgcenter .modal-body {
+    width: 100%;
+    text-align: center;
+}
+
+
+.form-mid-heading {
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+/**Data Table Css Start*/
+
+.tableReports .table-bordered > tbody > tr > td, .tableReports .table-bordered > tbody > tr > th, .tableReports .table-bordered > tfoot > tr > td, .tableReports .table-bordered > tfoot > tr > th, .tableReports .table-bordered > thead > tr > td, .tableReports .table-bordered > thead > tr > th {
+    text-align: center;
+}
+
+
+div.dataTables_wrapper div.dataTables_paginate {
+    margin: 6px 0px 0px 0px;
+    white-space: nowrap;
+    text-align: right;
+    display: inline-block;
+    float: right;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    display: inline-block;
+    margin-left: 21px;
+}
+
+.dataTables_length {
+    margin-right: 15px;
+    float: left;
+}
+
+.dt-buttons a {
+    color: #fff;
+    background: #337ab7;
+    border-color: #2e6da4;
+    border-radius: 4px;
+}
+
+.dt-buttons a:hover {
+        color: #fff;
+        background: #286090 !important;
+        border-color: #204d74;
+}
+
+.tableReports .table > thead > tr > th {
+    vertical-align: middle;
+    padding: 5px 22px;
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.tableReports .dataTables_length {
+    margin-top:10px ;
+}
+
+
+.tableReports .dataTables_length select {
+        margin: 0 8px;
+    }
+
+.tableReports tfoot tr th {
+    padding: 10px 0px 0px 10px !important;
+    height: 28px;
+}
+
+.checkbox-wrapper {
+    margin-top: 28px;
+}
+
+    .checkbox-wrapper input {
+        margin-left: 15px;
+    }
+
+.col4-btn {
+    margin-top: 25px;
+}
+
+
+.table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    text-align: left;
+}
+
+.nopadding-hostel {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.nopadding-PMS {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.no-padding-left {
+    padding-left: 0px;
+}
+
+/*Sabir*/
+
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.content-headerh1 {
+    color: #555555;
+    font-size: 22px;
+    font-weight: normal;
+    float: none;
+    text-shadow: 0 1px 0 #ffffff;
+    margin-left: 8px;
+    position: relative;
+}
+
+.checkYN {
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+
+.checkYN input[type=checkbox], .checkYN input[type=radio] {
+       margin-top: 10px;
+       margin-right: 20px;
+}
+
+
+
+.table-headletter tr th {
+    border-right: 1px solid #ddd !important;
+    border-bottom: transparent !important;
+    border-left: transparent !important;
+    border-top: transparent !important;
+    padding: 2px 8px !important;
+    height: auto !important;
+}
+
+.table-headletter tr td {
+    border-right: 1px solid #ddd !important;
+    border-bottom: transparent !important;
+    border-left: transparent !important;
+    border-top: transparent !important;
+    padding: 2px 8px !important;
+    height: auto !important;
+}
+
+.dropdown-menu.open {
+    width: 100%;
+}
+
+/**Data Table Css End*/
+
+.bootstrap-select.btn-group .btn .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a {
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px dashed #c6c6c6;
+    white-space: initial !important;
+}
+
+.bootstrap-select > .btn {
+    width: 100%;
+    padding-right: 25px;
+    display: block;
+}
+
+.universityUi .btn.dropdown-toggle.selectpicker .filter-option {
+    width: 400px;
+}
+
+.institutenameui .btn.dropdown-toggle.selectpicker .filter-option {
+    width: 400px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    margin-top: 10px;
+}
+
+div.dataTables_wrapper div.dataTables_processing {
+    border: none;
+    box-shadow: none;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background: url(/Images/bars.svg);
+    text-indent: -302px;
+    overflow: hidden;
+    margin-top: 0px !important;
+}
+
+/*css added for row color for excel bulk upload -*/
+.redcolor {
+    background-color: #427bad;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.yellowColor {
+    background-color: #878e86;
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+}
+
+/*Main Loader Blue*/
+
+#loader {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    z-index: 111111;
+    background: url(../../Images/Gear-1s-200px.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.overlay-loader {
+    background: #FFF;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 11111;
+}
+
+.academicfee .table > thead > tr > th {
+    white-space: normal !important;
+}
+
+.datatablecolleft {
+    text-align:left !important
+}
+
+
+
+.datatablecolright {
+    text-align:right !important
+}
+
+.buttontopmargin {
+
+    margin-top:24px;
+}
+
+/*Main Loader Blue*/
+
+
+
+/*AKANSHA*/
+
+.akanshatable tbody tr th td {
+
+    text-align: left !important;
+}
+
+.student-dashb-m {
+    margin-top:15px;
+}
+
+.mid-heading-new{
+    margin: 0px;
+    padding:24px 0px 10px 0px;
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+    text-shadow: 0 1px 0 #ffffff;
+    position: relative;
+}
+
+.validation-summary-errors ul{
+    list-style:none;
+    margin:-5px 0px 10px 0px;
+    padding:0px;
+}
+
+.textbox-default{
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    padding: 0px 0px;
+    height: auto;
+}
+
+.bootstrap-select .dropdown-menu > li > a{
+    white-space:normal;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner {
+    text-overflow: ellipsis;
+}
+
+.slimScrollBar{
+    background: rgb(189, 189, 189) none repeat scroll 0% 0% !important;
+    opacity: 1 !important;
+    width: 8px !important;
+}
+
+#MPTAASModal .modal-dialog, #MPTAASModalbtn .modal-dialog{
+    width:900px;
+}
+
+#MPTAASModal .modal-body p, #MPTAASModalbtn .modal-body p{
+    font-size:15px;
+    margin-bottom:5px;
+    line-height:28px;
+}
+
+#MPTAASModal .modal-body ul li, #MPTAASModalbtn .modal-body ul li{
+    font-size:15px;
+    line-height:28px;
+    margin-bottom:5px;
+    margin-left:10px;
+}
+
+#MPTAASModal .modal-header, #MPTAASModalbtn .modal-header{
+    color: #FFF !important;
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
+}
+
+#MPTAASModal .close, #MPTAASModalbtn .close{
+    color:#FFF;
+    opacity:10;
+}
+
+#divViewImage .modal-dialog{
+    width:1000px;
+    height: 630px;
+}
+
+#divViewImage .modal-dialog img{
+    height:700px;
+}
+
+.bc{
+    margin-left:-10px;
+}
+
+.tableReports .dt-button{
+    display:inline-block;
+    padding:6px 12px;
+    margin-bottom:0;
+    font-size:14px;
+    font-weight:400;
+    line-height:1.42857143;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    -ms-touch-action:manipulation;
+    touch-action:manipulation;
+    cursor:pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    background-image:none;
+    border:1px solid transparent;
+    border-radius:4px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+
+.tableReports .dt-button:hover{
+    color:#fff;
+    background-color:#286090;
+    border-color:#204d74
+}
+
+.tableReportsNew div.dataTables_wrapper div.dataTables_info{
+    padding-top:15px;
+}
+
+.pagination-payment input{
+position: relative;
+
+padding: 7px 12px;
+
+margin-left: 0px;
+
+line-height: 1.42857143;
+
+color: #337ab7;
+
+text-decoration: none;
+
+background-color: #fff;
+
+border: 1px solid #ddd;
+
+    border-top-color: rgb(221, 221, 221);
+    border-right-color: rgb(221, 221, 221);
+    border-bottom-color: rgb(221, 221, 221);
+    border-left-color: rgb(221, 221, 221);
+
+width: 50px;
+
+border-radius: 0px !important;
+}
+
+.dataTable > thead > tr > th[class*="sort"]::after {
+        display: none;
+}
+
+.dataTable > thead > tr > th.no-sort{
+    cursor:pointer;
+    pointer-events:none;
+}
+
+.dataTable > thead > tr > th.no-sort:after {
+        display: none;
+        
+}
+
+.dataTable > thead > tr > th.sort:after {
+        display:block;
+        
+}
+
+
+ul.treeview-menu li ul li a i{
+    margin-right: 10px;
+    font-size: 12px;
+    float: left;
+    height: 25px;
+    margin-top: 5px;
+}
+
+.input-group-addon{
+    cursor:pointer;
+}
+
+.addbudgetlinetable td{
+    white-space:nowrap;
+}
+
+.annualbudgetupdattable .table-bordered > tbody > tr > td, .annualbudgetupdattable .table-bordered > tbody > tr > th{
+    width:25%;
+}
+
+.radioinline-mt{
+    margin-top:-13px !important;
+}
+
+.alert{
+    margin-bottom:0px;
+}
+
+.desclarepms ul.list-group-item-info{
+    list-style: none !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.desclarepms ul.list-group-item-info li{
+    margin:0px;
+    padding:5px 10px;
+    display:block;
+}
+
+
+
+.allowancetype input[type=checkbox]{
+    float:left;
+    height:20px;
+    margin:0px 8px 8px 0px;
+}
+
+#dvrMentenance .widget-content, #dvrThesis .widget-content, #dvrBookAllowance .widget-content, #dvrReimbursement .widget-content, #dvrStudyTour .widget-content{
+    padding:15px 15px !important;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled]{
+    background-color: #d6d2d2;
+    opacity: 1;
+}
+
+.table-status .table tr td {
+    width: 30%;
+}
+
+.table-status .table tr th {
+    width: 20%;
+}
+
+#modalConfirmYesNo .modal-title{
+    text-align:center;
+}
+
+#modalConfirmYesNo .modal-title b{
+    margin-bottom:0px;
+    display:block;
+}
+
+#UpdateInstitute .modal-dialog{
+    width:800px !important;
+}
+
+.HeadingBlue{
+	color:#337ab7;
+	font-size:18px;
+}
+
+
+.ErrorNone{
+    display:none;
+}
+
+.ErrorBlock{
+    display:block;
+    color: #fa0634;
+    font-size: 14px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.anuual-income-select {
+    width:35% !important;
+}
+
+
+.calendaricon{
+    margin:0px;
+    padding:0px;
+    display:inline-block;
+    position:relative;
+}
+
+.calendaricon input.border-input{
+    width:78% !important;
+    margin-right: 0px !important;
+    display:inline-block;
+}
+
+.clendar-ico {
+   background-color: #EEE;
+border: 1px solid #DDD;
+border-left: none;
+padding: 9px 8px;
+margin-left: -4px;
+}
+
+#modelUpdateAdharDetail .modal-dialog{
+    width:1000px;
+}
+
+#divAlterForMPTAAS.modal{
+    z-index:999999;
+}
+
+#verifyRenewalModal .modal-dialog{		
+    width:1000px;		
+}
+
+@media (max-width: 1620px) {
+    .bootstrap-select.btn-group .btn .filter-option {
+    width:141px;
+}
+}
+
+@media (max-width: 1366px) {
+    .bootstrap-select.btn-group .btn .filter-option {
+    width:141px;
+}
+}
+
+@media (max-width: 1280px) {
+    .bootstrap-select.btn-group .btn .filter-option {
+    width:141px;
+}
+}
+
+@media (max-width: 768px) {
+    #MPTAASModal .modal-dialog, #MPTAASModalbtn .modal-dialog{
+        width:auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+      #verifyRenewalModal .modal-dialog{		
+    width:auto;		
+}		
+
+
+#modelUpdateAdharDetail .modal-dialog{
+    width:auto;
+}
+
+    #UpdateInstitute .modal-dialog{
+    width:auto;
+    }
+
+    #MPTAASModal .modal-dialog, #MPTAASModalbtn .modal-dialog{
+        width:auto;
+    }
+
+    .widget-title, .modal-header, .table th, div.dataTables_wrapper .ui-widget-header{
+        height:auto;
+    }
+
+    .main-header .navbar-brand{
+        display:none;
+    }
+
+    .fixed .content-wrapper, .fixed .right-side{
+        padding-top:0px;
+    }
+
+    .no-padding-right, .no-padding-left, .no-padding-PMS, .no-padding{
+        padding-left:15px !important;
+        padding-right:15px !important;
+    }
+
+.form-control{
+        margin-bottom:15px;
+}
+
+.dataTables_length {
+    margin-left: 15px;
+
+}
+
+.tableReports{
+    padding-top:15px;
+}
+
+.dt-buttons{
+    margin-left:15px ;
+}
+
+div.dataTables_wrapper div.dataTables_paginate{
+    margin-left:15px !important;
+}
+
+.navbar-toggle{
+    color:#000;
+    margin-right:15px !important;
+}
+
+}
+
+
+

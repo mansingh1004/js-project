@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <title>admin panel</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* padding: 20px; */
+    background-color: #f4f4f9;
+    
+  }
+   
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 40px solid grey;
+  }
+
+  table th, table td {
+    padding: 15px;
+    text-align: left;
+    
+  }
+
+  table th {
+   border-left: 5px solid white ;
+  
+    background-color: grey;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  table tr {
+    border-bottom: 1px solid whitesmoke;
+  }
+
+  table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  table tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  input[type="number"]{
+     font-size: 16px;
+  }
+
+  input[type="text"]:focus {
+    border-color: #009879;
+    outline: none;
+  }
+
+  .button {
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .button-edit {
+    background-color: #7d4caf; /* Green */
+    border-radius: 50px;
+    width: 60px;
+
+  }
+
+  .button-save {
+    background-color: #b1297d; /* Blue */
+    display: none;
+  }
+
+  .button-delete {
+    background-color: #986631; /* Red */
+  }
+
+  @media (max-width:426px) {
+      table th, table td {
+    padding: 0px;
+    text-align: left;
+    
+  }
+  table th {
+   border-left: 0px solid yellow ;
+  
+    background-color: #2e167b;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 0px solid #2e167b;
+  }
+  input[type="text"] {
+    width: 90%;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  input[type="number"]{
+     font-size: 12px;
+  }
+  .button{
+      height: 25px;
+    width: 60px;
+    font-size: 10px;
+  }
+      
+  }
+</style>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-blender' style='color:#ffffff'></i>
+          <span class="logo_name">Deshboard</span>
+        </div>
+        <!-- =====================deshboard panel============== -->
+        <ul class="nav-links">
+          <li>
+            <a href="#" class="active">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Deshboard</span>
+            </a>
+          </li>
+          
+          
+
+          
+
+          <li>
+            <a href="insert.html">
+              <i class='bx bx-box'></i>
+              <span class="links_name">Add Employee</span>
+            </a>
+          </li>
+          <li>
+            <a href="display.html">
+              <i class='bx bx-list-ul'></i>
+              <span class="links_name">Display Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="update.html">
+              <i class='bx bx-book-alt'></i>
+              <span class="links_name">Update Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="links_name">Setting</span>
+            </a>
+          </li>
+          <li class="log_out">
+            <a href="#">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <section class="home-section">
+        <!-- ======================navbar section =================== -->
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Deshboard</span>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search'></i>
+          </div>
+          <div class="profile-details">
+            <!-- <img src="images.jpg" alt> -->
+            <span class="admin_name">Man Singh</span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+        </nav>
+
+        <div class="context">
+          <table id="demo1">
+
+          </table>
+        </div>
+      </section>
+  
+      <script>
+     let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".sidebarBtn");
+  sidebarBtn.onclick = function() {
+    sidebar.classList.toggle("active");
+    if(sidebar.classList.contains("active")){
+    sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+  }else
+    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+  }
+   </script>
+   <script src="/script.js/update.js"></script>
+  
+    </body>
+  </html>
+</body>
+</html>

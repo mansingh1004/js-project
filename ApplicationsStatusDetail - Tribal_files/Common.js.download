@@ -1,0 +1,306 @@
+﻿//This settings for Jquery Datatables only
+var Grid = {
+    lengthMenu: [[2, 4, 6, 10, 20, 50, 100, 200, 500], [2, 4, 6, 10, 20, 50, 100, 200, 500]],
+    emptyTable: "No Records found.",
+    sDom: "Rfrtlip" //for showing page dropdown in bottom
+};
+var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+
+var monthSortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+];
+
+var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+//maximum size of file to upload is 2 MB
+//var maxFileSizeLimit = 500;
+var maxFileSizeLimit = 2048;
+
+$(document).ready(function () {
+    $('form').attr('autocomplete', 'off');
+    $(".toggle-password").click(function () {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+    });
+
+
+    /** add active class and stay opened when selected */
+    //alert("Calling");
+    var url = window.location;
+    // for sidebar menu entirely but not cover treeview
+    $('ul.sidebar-menu a').filter(function () {
+        return this.href == url;
+    }).parent().addClass('active');
+    // for treeview
+    $('ul.treeview-menu a').filter(function () {
+        return this.href == url;
+    }).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+});
+
+
+
+//Used to Show Error or Success Message on Page.
+var loaderDiv = "#loader";
+(function ($) {
+    var xhrPool = [];
+    $(document).ajaxSend(function (e, jqXHR, options) {
+        xhrPool.push(jqXHR);
+        $(".overlay-loader").show();
+        $(loaderDiv).css({ "display": "block" });
+        //$(loaderDiv).center().css({ "display": "block" });
+    });
+    $(document).ajaxComplete(function (e, jqXHR, options) {
+        xhrPool = $.grep(xhrPool, function (x) { return x != jqXHR });
+        if (xhrPool == null || xhrPool.length <= 0) {
+            setTimeout(function () {
+                $(".overlay-loader").hide();
+                $(loaderDiv).css({ "display": "none" });
+                //$(loaderDiv).center ().css({ "display": "none" });
+            }, 500);
+        }
+        else {
+            $(".overlay-loader").hide();
+            $(loaderDiv).css({ "display": "none" });
+            console.log("Ajax Complete Null Reference.");
+        }
+    });
+    $(document).ajaxError(function (e, jqXHR, options) {
+        $(".overlay-loader").hide();
+        $(loaderDiv).css({ "display": "none" });
+        console.log("Ajax Error Occured.");
+    });
+})(jQuery);
+
+var AccessControler = {
+    GetIsActive: function (jsondata, timeOut, methodName, callback) {
+        $.ajax({
+            type: "Get",
+            data: jsondata,
+            dataType: 'Json',
+            timeout: timeOut,
+            contentType: "application/json",
+            url: methodName,
+            success: function (response) {
+                callback(response);
+            }, error: function (request, status, error) {
+
+            }
+        });
+    },
+
+    PostIsActive: function (jsondata, timeOut, methodName, callback) {
+        $.ajax({
+            type: "Post",
+            data: jsondata,
+            dataType: 'Json',
+            timeout: timeOut,
+            url: methodName,
+            success: function (response) {
+                callback(response);
+            }, error: function (request, status, error) {
+                console.log("Invalid data");
+                //showKnightAlert("divAlterForMPTAAS", false, "Invalid data", 5000);
+            }
+        });
+    },
+}
+
+function showMessage(messagedvId, isSuccess, message, msgTime) {
+    msgTime = typeof msgTime !== 'undefined' ? msgTime : 20000;
+    $('#' + messagedvId).removeClass();
+    $('#' + messagedvId + ' span').html(message);
+    if (isSuccess == "warning") {
+        $('#' + messagedvId).addClass('alert-box warning radius');
+    }
+    else {
+        if (isSuccess) {
+            $('#' + messagedvId).addClass('alert-box success radius');
+        }
+        else {
+            $('#' + messagedvId).addClass('alert-box alert radius');
+        }
+    }
+    $('#' + messagedvId).show();
+    var timeoutHandle = window.setTimeout(function () {
+        $('#' + messagedvId + ' span').html('');
+        $('#' + messagedvId).hide();
+    }, msgTime);
+    // in your click function, call clearTimeout
+    window.clearTimeout(timeoutHandle);
+}
+function showMPTAASAlert(messagedvId, isSuccess, message, msgTime, symbol) {
+    msgTime = typeof msgTime !== 'undefined' ? msgTime : 20000;
+    $('#' + messagedvId + ' span').html(message);
+    $('#' + messagedvId).modal('show');
+    var timeoutHandle = window.setTimeout(function () {
+        $('#' + messagedvId + ' span').html('');
+        $('#' + messagedvId).modal('hide');
+        //$('#' + messagedvId).hide();
+    }, msgTime);
+    // in your click function, call clearTimeout
+    window.clearTimeout(timeoutHandle);
+    var timeoutHandle = window.setTimeout(function () {
+        $('#' + messagedvId + ' span').html('');
+        $('#' + messagedvId).modal('hide');
+        //$('#' + messagedvId).hide();
+    }, msgTime);
+}
+
+function showMPTAASAlert11(messagedvId, isSuccess, message, msgTime, symbol, chkboxId, dvrMentenance, dvrDisability, dvrThesis, dvrStudyTour
+    , dvrBookAllowance, tblAllowanceList) {
+    msgTime = typeof msgTime !== 'undefined' ? msgTime : 20000;
+    $('#' + messagedvId + ' span').html(message);
+    $('#' + messagedvId).modal('show');
+    var timeoutHandle = window.setTimeout(function () {
+        $('#' + messagedvId + ' span').html('');
+        $('#' + messagedvId).modal('hide');
+        //$('#' + messagedvId).hide();
+    }, msgTime);
+    // in your click function, call clearTimeout
+    window.clearTimeout(timeoutHandle);
+    var timeoutHandle = window.setTimeout(function () {
+        $('#' + messagedvId + ' span').html('');
+        $('#' + messagedvId).modal('hide');
+        document.getElementById(chkboxId).checked = false;
+        $(dvrMentenance).hide();
+        $(dvrStudyTour).hide();
+        $(tblAllowanceList).html('');
+        $(dvrBookAllowance).hide();
+    }, msgTime);
+}
+
+//Confirm Dialog
+function showMPTAASConfirm(title, msg) {
+    var $confirm = $("#modalConfirmYesNo");
+    $confirm.modal('show');
+    $("#lblTitleConfirmYesNo").html(title);
+    $("#lblMsgConfirmYesNo").html(msg);
+}
+function hideMPTAASConfirm(title, msg) {
+    var $confirm = $("#modalConfirmYesNo");
+    $confirm.modal('hide');
+}
+function showMPTAASConfirm_reject(title, msg) {
+    var $confirm = $("#modalConfirmYesNo_reject");
+    $confirm.modal('show');
+    $("#lblTitleConfirmYesNo_reject").html(title);
+    $("#lblMsgConfirmYesNo_reject").html(msg);
+}
+
+//Dropdown Functions
+var Dropdown = {};
+Dropdown.CascadingDropDown = function (p) {
+    var controlID = p.controlID;
+    var defaultText = p.defaultText;
+    var clearControlsId = p.clearControlsId;
+    var clearControlsDefaultText = p.clearControlsDefaultText;
+    var serviceURL = p.serviceURL;
+    var data = p.data;
+    var selectedValue = p.selectedValue;
+    var dataTextField = p.dataTextField;
+    var dataValueField = p.dataValueField;
+
+    if (typeof (p.defaultValue) == 'undefined') {
+        defaultValue = '';
+    }
+    else {
+        defaultValue = p.defaultValue;
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: serviceURL,
+        dataType: 'json',
+        data: data, // or JSON.stringify ({name: 'jonas'}),
+        async: false,
+        success: function (successData) {
+            Dropdown.ClearDropdown({ controlID: controlID, defaultText: defaultText, defaultValue: defaultValue })
+            $.each(successData, function (obj, item) {
+                var itemtext = 'item.' + dataTextField;
+                var itemvalue = 'item.' + dataValueField;
+
+                $('#' + controlID).append($("<option>").val(item[dataValueField]).text(item[dataTextField]));
+
+            });
+
+        },
+        error: function (ex) {
+
+            Dropdown.ClearDropdown({ controlID: controlID, defaultText: defaultText, defaultValue: defaultValue })
+            var clearcontrolsid = clearControlsId.split(',');
+            var clearcontrolsdefaulttext = clearControlsDefaultText.split(',');
+            for (var i = 0; i < clearcontrolsid.length; i++) {
+                if (clearcontrolsid[i] != "" && clearcontrolsid[i] != undefined) {
+                    Dropdown.ClearDropdown({ controlID: clearcontrolsid[i], defaultText: clearcontrolsdefaulttext[i] })
+                }
+            }
+        },
+        complete: function () {
+
+            var clearcontrolsid = clearControlsId.split(',');
+            var clearcontrolsdefaulttext = clearControlsDefaultText.split(',');
+            if (selectedValue != '' && selectedValue != undefined) {
+                $('#' + controlID + ' option[value=' + selectedValue + ']').attr('selected', 'selected');
+            }
+            for (var i = 0; i < clearcontrolsid.length; i++) {
+
+                //  Dropdown.ClearDropdown({ controlID: clearcontrolsid[i], defaultText: clearcontrolsdefaulttext[i] })
+            }
+        },
+
+    });
+
+
+};
+Dropdown.ClearDropdown = function (p) {
+    var controlID = p.controlID;
+    var defaultText = p.defaultText;
+    var defaultValue = p.defaultValue;
+
+    $('#' + controlID).empty();
+    $('#' + controlID).append('<option value="' + defaultValue + '">' + defaultText + '</option>');
+
+}
+
+function clearValidation(formElement) {
+    //Internal $.validator is exposed through $(form).validate()
+    var validator = $(formElement).validate();
+    //Iterate through named elements inside of the form, and mark them as error free
+    $('[name]', formElement).each(function () {
+        validator.successList.push(this);//mark as error free
+        validator.showErrors();//remove error messages if present
+    });
+    validator.resetForm();//remove error class on name elements and clear history
+    validator.reset();//remove all error and success data
+}
+
+function checkValidImage(obj, copyTo, fileSize) {
+    var ext = obj.val().split('.').pop().toLowerCase();
+    if ($.inArray(ext, ['png', 'jpg', 'jpeg', 'pdf']) == -1) {
+        obj.val("");
+        showMPTAASAlert("divAlterForMPTAAS", true, "Image Should be in png, jpg, jpeg, pdf format.", 5000);
+    }
+    else {
+        var sizeInKB = fileSize / 1024;    //Normally files are in bytes but for KB divide by 1024 and so on
+        var sizeLimit = maxFileSizeLimit;
+        if (sizeInKB > sizeLimit) {
+            obj.val("");
+            $(copyTo).val("");
+            showMPTAASAlert("divAlterForMPTAAS", true, "Maximum file size should be 2MB", 5000);
+        } else {
+            $(copyTo).val(obj.val())
+        }
+
+
+    }
+}
+
+
